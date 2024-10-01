@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = "hola"; //En el string se asignan valores entre comillas dobles("")
+        var y = 'hola'; //O simples...
+
+        // Las comillas simples y dobles no son multlinea
+        // para hacerlo multilinea concatenar
+
+        var w= "Hola, " + "que tal?";
+        var q = w.concat("Muy bien, y tú?");
+
+        var q = w.concat("Muy bien, y tú?");
+
+        var t= "Hola \"Belén\" ";
+        var s= "Adiós \"Belén\" ";
+        var rr= 'Bye, "Belén"'
+
+        //PROPIEDADES
+        console.log(rr.length);
+
+        //Los índices del String siempre empiezan en 0
+        for (let i = 0 ; i <= rr.length; i++){
+            console.log(rr[i]);
+        }
+
+        console.log("En la posición 7 del string rr tenemos la letra...")
+        console.log(rr.indexOf("B",3));
+        console.log(rr.search("t"));
+        console.log(rr.includes("ye"));
+
+    </script>
+</body>
+</html>

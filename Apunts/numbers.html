@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //No se distingue entre números enteros y flotantes
+        //64 bits en punto flotante IEEE 754
+
+        var x = 3.987654;
+        var y = 4;
+        var a = "99"; //STRING
+
+        
+        console.log(Number.MAX_VALUE);
+        console.log(Number.MIN_VALUE);
+        
+
+        var z = parseInt(a);
+
+        var zz= parseFloat(y);
+
+        var zzz = parseInt(x);
+
+        var s = x.toFixed(2); // para indicar que queremos solo 2 decimales
+
+        var b = "hola";
+        var c = parseInt(b);
+        console.log(c);
+
+        console.log(Number.isNan(b)); //False -> b no tiene el valor
+        console.log(Number.isNan(x)); //False -> x no tiene el valor
+        console.log(Number.isNan(c)); //True -> c tiene el valor Nan
+        console.log(isNan(b)); //???
+
+        
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Operadores asignación
+        var x = 5;
+        var y = 7;
+
+        var esVerdad= true;
+        var a = "Ho";
+        var b = "la";
+
+        x = x + 4;
+        x = x - 4;
+        x = x * 4;
+        x = x / 4;
+        x = x % 4; //Resultado división
+        x = x ** 4; //Exponente
+        
+        x++; //x +1
+        x--;
+
+        x+=4; // x+4
+        x*=4 // x*4
+        //etc.
+
+        var x = 5;
+        console.log("x == 5", x == 5);
+        console.log("x == 5", x == "5");
+
+        var x = 7;
+        console.log("x!=5", x !=5);
+        console.log("x!=5", x !='5');
+        console.log(typeof x, typeof '5');
+        console.log("x!== 5", x !=5);
+        console.log("x!==5", x !='5');
+
+        console.log(5 != '5');  // false (JavaScript convierte el '5' string a 5 número y los considera iguales)
+        console.log(5 != 6);    // true  (Los valores son diferentes)
+
+        console.log(5 !== '5');  // true (El número 5 y el string '5' son diferentes tipos)
+        console.log(5 !== 5);    // false (El valor y el tipo son exactamente iguales)
+
+        //AL HACER PETICIÓN ASICRONA ASEGURARNOS QUE NÚMEROS SON NÚMEROS Y STRINGS SON STRINGS
+        var k = 9;
+        var l = "7";
+        console.log(k+l) // Castea a string
+        // Mejor usar parseInt para asegurar que sean números
+        console.log(parseInt(k) + parseInt(l));
+
+        /*
+         && -> AND
+         || -> OR
+         ! -> NOT
+        */
+
+
+
+
+
+    </script>
+</body>
+</html>

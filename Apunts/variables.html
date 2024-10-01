@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = null; //TIPO NULL
+        var b; //Variable indefinida UNDEFINED
+        var c = false; //variable boolean
+        var d = 4; //TIPO NUMBER
+        var e = 5.6; //TIPO NUMBER
+        var f = "Hola" //TIPO STRING
+        // TIPO OBJECT
+        var g = {
+            nombre: "Belen",
+            apellidos: "Laserna Belenguer"
+        };
+
+
+        console.log(a); 
+        console.log(typeof a); //PARA SABER EL TIPO
+
+
+        //Los tipos de datos son dinámicos (CUIDADO CON ESTO)
+
+        a = 3; //MALA PRÁCTICA 
+
+        console.log(a);
+        console.log(typeof a);
+
+
+    // var -> Para declarar variables
+    // ES6 -> declarar las variables con let o const
+
+    //ÁMBITO
+        let p1 = hola;
+        function prueba(p1){
+            console.log(p1);
+        }   
+
+        console.log(p1);
+
+        prueba();
+    </script>
+</body>
+</html>
