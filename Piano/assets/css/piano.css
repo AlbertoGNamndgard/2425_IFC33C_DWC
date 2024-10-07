@@ -22,8 +22,8 @@ body {
 
 .white-box {
     background-color: white; 
-    width: 80%; 
-    height: 500px; 
+    width: 82%; 
+    height: 350px; 
     margin: 20px auto; 
     border: 2px solid black; 
     border-radius: 5px; 
@@ -34,7 +34,6 @@ body {
     padding: 5px 0; 
     text-align: center; 
 }
-
 
 .red-box {
     background-color: red; 
@@ -134,4 +133,38 @@ body {
     background-color: darkred; 
     transform: scale(1.05); 
     transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.result-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 20px auto; 
+    width: 80%; 
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column; 
+    text-align: left; 
+    flex-grow: 1; 
+    margin-left: 400px;
+}
+
+.red-box.narrow-box {
+    width: 150px; 
+    text-align: center; 
+    margin-left: 0; 
+    margin-right: 430px; 
+    flex-shrink: 0; 
+}
+
+.cercant {
+    font-size: 24px; 
+    font-weight: bold; 
+    text-align: center; 
+}
+
+.red-text {
+    color: rgba(255, 0, 0, 0.8); 
 }
