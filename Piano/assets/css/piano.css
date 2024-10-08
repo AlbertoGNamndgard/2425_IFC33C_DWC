@@ -23,7 +23,7 @@ body {
 .white-box {
     background-color: white; 
     width: 82%; 
-    height: 350px; 
+    height: 400px; 
     margin: 20px auto; 
     border: 2px solid black; 
     border-radius: 5px; 
@@ -36,13 +36,29 @@ body {
 }
 
 .red-box {
-    background-color: red; 
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 150px;
+}
+
+.red-box button {
+    background-color: transparent; 
+    border: none; 
     color: white; 
-    text-align: center; 
-    padding: 10px; 
-    border-radius: 5px; 
-    margin: 10px auto; 
-    width: 150px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    width: 100%; 
+    padding: 0; 
+}
+
+.red-box button:focus, .red-box button:hover {
+    outline: none; 
+    background-color: darkred; 
+    transition: background-color 0.3s ease; 
 }
 
 .piano {
@@ -148,15 +164,21 @@ body {
     flex-direction: column; 
     text-align: left; 
     flex-grow: 1; 
-    margin-left: 400px;
+    margin-left: 250px;
+    width: 60vw; 
+    max-width: 600px; 
+    min-width: 300px; 
 }
 
 .red-box.narrow-box {
-    width: 150px; 
+    width: 20vw; 
+    max-width: 150px;
+    min-width: 100px;
     text-align: center; 
     margin-left: 0; 
-    margin-right: 430px; 
+    margin-right: 450px; 
     flex-shrink: 0; 
+    
 }
 
 .cercant {
@@ -167,4 +189,21 @@ body {
 
 .red-text {
     color: rgba(255, 0, 0, 0.8); 
+}
+
+#notaInput {
+    width: 40%; 
+    padding: 10px; 
+    border-radius: 15px; 
+    border: 1px solid #ccc; 
+    margin: 10px auto; 
+    font-size: 16px; 
+    display: block;
+}
+
+.result-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: green; 
 }

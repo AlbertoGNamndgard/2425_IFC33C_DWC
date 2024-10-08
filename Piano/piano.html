@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="assets/css/piano.css">
-
-
     <link rel="icon" type="image/png" sizes="128x128" href="assets/img/icons/favicon-128x128.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/img/icons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32x32.png">
@@ -47,9 +45,9 @@
     </ul>
     <div class="white-box">
         <p class="cercant">CERCANT...</p>
-        <p>Do Re Mi Fa#</p>
+        <input type="text" id="notaInput" placeholder="Introduce una nota (DO, DO#, RE, RE#, MI, FA, FA#, SOL, SOL#, LA, LA#, SI)">
         <div class="red-box">
-            Esborrar
+            <button onclick="agregarNota()">Introduir</button>
         </div>
         
         <h2>RESULTATS:</h2>
@@ -70,5 +68,67 @@
             <div class="red-box narrow-box">Reproduir Cançó</div>
         </div>
     </div>
+
 </body>
+
+<script>
+    function Nota(nota) {
+        this.nota = nota;
+    }
+
+    let composicio = [];
+    let SantAntoni = ["DO","FA","MI","SOL","LA","SI","LA","DO"];
+    let Balanguera = ["RE","MI","RE","SOL","SI","DO","FA","RE"];
+
+    function afegirNota(nota) {
+        let nuevaNota = new Nota(nota);
+        composicio.push(nuevaNota); 
+    }
+
+    function agregarNota() {
+        let notaInput = document.getElementById("notaInput").value.toUpperCase(); 
+        if (notaInput) {
+            afegirNota(notaInput); 
+            document.getElementById("notaInput").value = ""; 
+        } else {
+            console.log("No se introdujo ninguna nota.");
+        }  
+    }
+
+    function compararComposicio() {
+        let coincideSantAntoni = true;
+        if (composicio.length === SantAntoni.length) { 
+            for (let i = 0; i < SantAntoni.length; i++) {
+                if (composicio[i].nota !== SantAntoni[i]) {
+                    coincideSantAntoni = false;
+                    break; 
+                }
+            }
+        } else {
+            coincideSantAntoni = false; 
+        }
+
+        let coincideBalanguera = true;
+        if (composicio.length === Balanguera.length) { 
+            for (let i = 0; i < Balanguera.length; i++) {
+                if (composicio[i].nota !== Balanguera[i]) {
+                    coincideBalanguera = false;
+                    break; 
+                }
+            }
+        } else {
+            coincideBalanguera = false; 
+        }
+
+        if (coincideSantAntoni) {
+            console.log("Enhorabuena, has tocado Sant Antoni genial");
+        }
+        if (coincideBalanguera) {
+            console.log("Enhorabuena, has tocado La Balanguera");
+        } else {
+            console.log("No ha sonado igual, vuelve a intentarlo");
+        }
+    }
+
+</script>
 </html>
