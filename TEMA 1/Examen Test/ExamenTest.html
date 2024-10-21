@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Hero Squad</title>
+</head>
+<body>
+    <script>
+    let json = {
+        squadName: "Super hero squad",
+        homeTown: "Metro City",
+        formed: 2020,
+        secretBase: "Super tower",
+        active: true,
+        members: [
+            {
+                name: "Molecule Man",
+                age: 29,
+                secretIdentity: "Dan Jukes",
+                powers: [
+                    "Radiation resistance",
+                    "Turning tiny",
+                    "Radiation blast"
+                ]
+            },
+            {
+                name: "Madame Uppercut",
+                age: 30,
+                secretIdentity: "Jane Wilson",
+                powers: [
+                    "Million tonne punch",
+                    "Damage resistance",
+                    "Superhuman reflexes"
+                ]
+            },
+            {
+                name: "Eternal Flame",
+                age: 1000000,
+                secretIdentity: "Unknown",
+                powers: [
+                    "Immortality",
+                    "Heat Immunity",
+                    "Inferno",
+                    "Teleportation",
+                    "Interdimensional travel"
+                ]
+            }
+        ]
+    };
+
+    console.log(json.squadName + "\n" + 
+                "Ciudad de origen: " + json.homeTown + "\n"  +
+                "Fecha Origen: " + json.formed + "\n" + 
+                "Base secreta: " + json.secretBase + "\n" +
+                "¿Activo?: " + json.active + "\n");
+
+    for (let i = 0; i < json.members.length; i++) {
+        let member = json.members[i];
+        console.log(
+            "Nombre: " + member.name + "\n" +
+            "Edad: " + member.age + "\n" +
+            "Identidad secreta: " + member.secretIdentity + "\n" +
+            "Poderes: " + member.powers.join(', ') 
+        );
+        console.log("---------------------------");
+    }
+    </script>
+</body>
+</html>

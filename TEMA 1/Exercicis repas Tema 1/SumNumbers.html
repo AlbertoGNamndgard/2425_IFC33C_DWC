@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numeros = [3, -2, 15, 28, 33];
+        var decimales = [ 8, 3.2, 12, 22, 25];
+
+        function sumaAleatoria (numeros, decimales){
+            var min = 0;
+            var max = numeros.length - 1;
+
+            var numAleatorio = numeros[Math.floor(Math.random() * (max - min + 1)) + min];
+            var decAleatorio = decimales[Math.floor(Math.random() * (max - min + 1)) + min];
+
+            var suma = numAleatorio + decAleatorio;
+            console.log(suma);
+        }
+
+        sumaAleatoria(numeros,decimales);
+    </script>
+</body>
+</html>

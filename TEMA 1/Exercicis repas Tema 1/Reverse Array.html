@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var array = [3, 9, 10, 2, 11];
+        var transformacion = new Array(array.length);
+
+        function revertirArray(array) {
+            for (var i = 0; i <array.length;i++) {
+                transformacion[i] = array[array.length-1-i];
+            }
+        }
+
+        revertirArray(array);
+        for (var j = 0; j <transformacion.length;j++){
+            console.log(transformacion[j]);
+        }
+    </script>
+</body>
+</html>
