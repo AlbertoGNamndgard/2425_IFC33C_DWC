@@ -24,3 +24,12 @@ console.log(v5);
 
 var v6 = document.getRootNode();
 console.log(v6);
+
+var v7 = document.querySelector("#mujer>div");
+var v8 = document.querySelectorAll(".sexo");
+
+//Crear elementos
+var v8 = documment.createElement("h2");
+
+//v8.innertext = "Hola <spanstyle='color: red'> "
+v8.innertext = "Hola <spanstyle='color: red'> "
